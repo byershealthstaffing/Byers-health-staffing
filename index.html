@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Byers Health Staffing LLC | CNA Employment Application</title>
+<style>
+:root{
+  --bg:#f4f7fb; --card:#ffffff; --ink:#1d2939; --muted:#667085;
+  --brand:#173b63; --brand2:#2d6fa3; --line:#d9e2ec; --soft:#eef5fb;
+  --ok:#146c43; --danger:#b42318;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+.header{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;padding:34px 18px}
+.header-inner{max-width:920px;margin:auto}
+.brand{font-size:13px;letter-spacing:1.6px;font-weight:700;opacity:.95}
+h1{margin:7px 0 7px;font-size:32px;line-height:1.15}
+.subtitle{margin:0;opacity:.92;font-size:15px}
+.wrap{max-width:920px;margin:24px auto 48px;padding:0 16px}
+.notice{background:#fff;border-left:5px solid var(--brand2);padding:16px 18px;border-radius:10px;box-shadow:0 2px 12px rgba(16,24,40,.06);margin-bottom:18px}
+.notice strong{display:block;margin-bottom:4px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:16px 0;box-shadow:0 3px 14px rgba(16,24,40,.05);overflow:hidden}
+.card-h{padding:16px 20px;background:var(--soft);border-bottom:1px solid var(--line)}
+.card-h h2{margin:0;font-size:18px;color:var(--brand)}
+.card-b{padding:20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.full{grid-column:1/-1}
+label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
+.req{color:var(--danger)}
+input,select,textarea{width:100%;padding:12px 12px;border:1px solid #c9d4df;border-radius:9px;font:inherit;background:#fff;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(45,111,163,.18);border-color:var(--brand2)}
+.help{font-size:12px;color:var(--muted);margin-top:5px}
+.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.chk{display:flex;align-items:center;gap:8px;padding:11px;border:1px solid var(--line);border-radius:9px}
+.chk input{width:auto}
+.actions{display:flex;gap:12px;align-items:center;justify-content:flex-end;margin-top:22px}
+button{border:0;border-radius:10px;padding:13px 19px;font-weight:700;font-size:15px;cursor:pointer}
+.primary{background:var(--brand);color:#fff}
+.secondary{background:#e9eef4;color:var(--ink)}
+.progress{margin:18px 0 3px}
+.progress-bar{height:8px;background:#dde6ef;border-radius:20px;overflow:hidden}
+.progress-bar span{display:block;height:100%;width:0;background:var(--brand2);transition:.2s}
+.progress-txt{font-size:12px;color:var(--muted);margin-top:7px;text-align:right}
+.footer{font-size:12px;color:var(--muted);text-align:center;margin-top:24px;line-height:1.5}
+.success{display:none;background:#ecfdf3;border:1px solid #a6f4c5;color:var(--ok);padding:18px;border-radius:12px;margin-top:18px}
+@media(max-width:680px){
+  h1{font-size:27px}
+  .grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .checks{grid-template-columns:1fr}
+  .actions{flex-direction:column-reverse}
+  button{width:100%}
+}
+@media print{
+  body{background:#fff}
+  .header{background:#fff;color:#000;padding:12px 0}
+  .wrap{max-width:none;margin:0;padding:0}
+  .card,.notice{box-shadow:none}
+  .actions,.progress{display:none}
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">BYERS HEALTH STAFFING LLC</div>
+    <h1>CNA Employment Application</h1>
+    <p class="subtitle">Certified Nursing Assistant • Employment & Staffing Application</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="notice">
+    <strong>Thank you for your interest in Byers Health Staffing LLC.</strong>
+    Please complete all required fields. Do not enter Social Security numbers, banking information, or other unnecessary sensitive information in this public application.
+  </div>
+
+  <div class="progress">
+    <div class="progress-bar"><span id="bar"></span></div>
+    <div class="progress-txt" id="progressText">Application progress: 0%</div>
+  </div>
+
+  <form id="applicationForm" enctype="multipart/form-data">
+    <section class="card">
+      <div class="card-h"><h2>1. Applicant Information</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>First Name <span class="req">*</span></label><input required name="firstName" autocomplete="given-name"></div>
+          <div><label>Last Name <span class="req">*</span></label><input required name="lastName" autocomplete="family-name"></div>
+          <div><label>Email Address <span class="req">*</span></label><input required type="email" name="email" autocomplete="email"></div>
+          <div><label>Phone Number <span class="req">*</span></label><input required type="tel" name="phone" autocomplete="tel"></div>
+          <div class="full"><label>Street Address</label><input name="address" autocomplete="street-address"></div>
+          <div><label>City</label><input name="city" autocomplete="address-level2"></div>
+          <div><label>State</label><input name="state" maxlength="2" placeholder="PA"></div>
+          <div><label>ZIP Code</label><input name="zip" inputmode="numeric" autocomplete="postal-code"></div>
+          <div><label>Preferred Contact Method</label><select name="contactMethod"><option>Email</option><option>Phone call</option><option>Text message</option></select></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>2. CNA Certification</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>Certification State <span class="req">*</span></label><input required name="certState" maxlength="2" placeholder="PA"></div>
+          <div><label>CNA Certification / Registry Number <span class="req">*</span></label><input required name="certNumber"></div>
+          <div><label>Expiration Date</label><input type="date" name="certExpiration"></div>
+          <div><label>Certification Status <span class="req">*</span></label><select required name="certStatus"><option value="">Select</option><option>Active</option><option>Pending renewal</option><option>Other</option></select></div>
+          <div><label>CPR / BLS Certified?</label><select name="cpr"><option value="">Select</option><option>Yes</option><option>No</option></select></div>
+          <div><label>CPR / BLS Expiration</label><input type="date" name="cprExpiration"></div>
+          <div class="full"><label>Additional Certifications</label><textarea name="additionalCerts" placeholder="List any additional relevant healthcare certifications."></textarea></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>3. Experience</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>Years of CNA Experience <span class="req">*</span></label><select required name="years"><option value="">Select</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6+ years</option></select></div>
+          <div><label>Most Recent Employer</label><input name="employer"></div>
+          <div><label>Job Title</label><input name="jobTitle" placeholder="Certified Nursing Assistant"></div>
+          <div><label>Dates Employed</label><input name="datesEmployed" placeholder="Example: Jan 2024 – Aug 2026"></div>
+          <div class="full"><label>Relevant Experience / Duties</label><textarea name="experience" placeholder="Briefly describe your CNA experience, care settings, and responsibilities."></textarea></div>
+          <div class="full"><label>Care Settings Experienced</label>
+            <div class="checks">
+              <label class="chk"><input type="checkbox" name="setting" value="Long-Term Care"> Long-Term Care</label>
+              <label class="chk"><input type="checkbox" name="setting" value="Rehabilitation"> Rehabilitation</label>
+              <label class="chk"><input type="checkbox" name="setting" value="Hospital"> Hospital</label>
+              <label class="chk"><input type="checkbox" name="setting" value="Home Care"> Home Care</label>
+              <label class="chk"><input type="checkbox" name="setting" value="Assisted Living"> Assisted Living</label>
+              <label class="chk"><input type="checkbox" name="setting" value="Other"> Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>4. Availability</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>Earliest Start Date <span class="req">*</span></label><input required type="date" name="startDate"></div>
+          <div><label>Employment Preference</label><select name="employmentPreference"><option>Per diem / PRN</option><option>Part-time</option><option>Full-time</option><option>Open to all</option></select></div>
+          <div class="full"><label>Preferred Shifts</label>
+            <div class="checks">
+              <label class="chk"><input type="checkbox" name="shift" value="Day"> Day</label>
+              <label class="chk"><input type="checkbox" name="shift" value="Evening"> Evening</label>
+              <label class="chk"><input type="checkbox" name="shift" value="Night"> Night</label>
+              <label class="chk"><input type="checkbox" name="shift" value="Weekends"> Weekends</label>
+              <label class="chk"><input type="checkbox" name="shift" value="Holidays"> Holidays</label>
+              <label class="chk"><input type="checkbox" name="shift" value="Flexible"> Flexible</label>
+            </div>
+          </div>
+          <div class="full"><label>Availability Notes</label><textarea name="availabilityNotes" placeholder="List days, times, scheduling limits, or other availability details."></textarea></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>5. Professional References</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>Reference 1 Name</label><input name="ref1Name"></div>
+          <div><label>Reference 1 Phone / Email</label><input name="ref1Contact"></div>
+          <div><label>Reference 2 Name</label><input name="ref2Name"></div>
+          <div><label>Reference 2 Phone / Email</label><input name="ref2Contact"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>6. Documents</h2></div>
+      <div class="card-b">
+        <div class="grid">
+          <div><label>Résumé</label><input type="file" name="resume" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"><div class="help">PDF, Word, JPG or PNG.</div></div>
+          <div><label>CNA Credential</label><input type="file" name="cnaDoc" accept=".pdf,.jpg,.jpeg,.png"></div>
+          <div><label>CPR / BLS Card</label><input type="file" name="cprDoc" accept=".pdf,.jpg,.jpeg,.png"></div>
+          <div><label>Other Supporting Document</label><input type="file" name="otherDoc" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-h"><h2>7. Applicant Certification & Signature</h2></div>
+      <div class="card-b">
+        <p style="margin-top:0;line-height:1.6;font-size:14px">
+          I certify that the information provided in this application is true and complete to the best of my knowledge.
+          I understand that employment may be contingent upon verification of credentials, references, eligibility to work,
+          and any background or screening requirements applicable to the position and permitted by law.
+        </p>
+        <div class="grid">
+          <div class="full">
+            <label class="chk"><input required type="checkbox" name="certify"> I agree to the applicant certification above. <span class="req">*</span></label>
+          </div>
+          <div><label>Electronic Signature — Full Name <span class="req">*</span></label><input required name="signature" placeholder="Type your full legal name"></div>
+          <div><label>Date <span class="req">*</span></label><input required type="date" name="signatureDate" id="signatureDate"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button class="secondary" type="button" onclick="window.print()">Print / Save PDF</button>
+      <button class="primary" type="submit">Submit Application</button>
+    </div>
+
+    <div class="success" id="success">
+      <strong>Application submitted successfully.</strong><br>
+      Thank you for applying to Byers Health Staffing LLC. Your application has been sent for review.
+    </div>
+    <div class="success" id="errorBox" style="display:none;background:#fff1f0;border-color:#fecdca;color:#b42318">
+      <strong>We could not submit your application.</strong><br>
+      Please check your connection and try again.
+    </div>
+  </form>
+
+  <div class="footer">
+    Byers Health Staffing LLC • CNA Employment Application<br>
+    Equal employment opportunity practices should be applied in accordance with applicable federal, state, and local law.
+  </div>
+</main>
+
+<script>
+const form = document.getElementById('applicationForm');
+const required = [...form.querySelectorAll('[required]')];
+const bar = document.getElementById('bar');
+const progressText = document.getElementById('progressText');
+const signatureDate = document.getElementById('signatureDate');
+if(!signatureDate.value) signatureDate.value = new Date().toISOString().slice(0,10);
+
+function updateProgress(){
+  let done=0;
+  required.forEach(el=>{
+    if(el.type==='checkbox' ? el.checked : String(el.value).trim()!=='') done++;
+  });
+  const pct=Math.round((done/required.length)*100);
+  bar.style.width=pct+'%';
+  progressText.textContent='Application progress: '+pct+'%';
+}
+form.addEventListener('input', updateProgress);
+form.addEventListener('change', updateProgress);
+form.addEventListener('submit', async e=>{
+  e.preventDefault();
+  if(!form.reportValidity()) return;
+
+  const submitButton = form.querySelector('button[type="submit"]');
+  const success = document.getElementById('success');
+  const errorBox = document.getElementById('errorBox');
+  success.style.display = 'none';
+  errorBox.style.display = 'none';
+  submitButton.disabled = true;
+  submitButton.textContent = 'Submitting…';
+
+  try {
+    const response = await fetch('/api/submit', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok) throw new Error(result.error || 'Submission failed');
+
+    success.style.display='block';
+    success.scrollIntoView({behavior:'smooth',block:'center'});
+    form.reset();
+    if(!signatureDate.value) signatureDate.value = new Date().toISOString().slice(0,10);
+    updateProgress();
+  } catch (err) {
+    errorBox.style.display='block';
+    errorBox.scrollIntoView({behavior:'smooth',block:'center'});
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = 'Submit Application';
+  }
+});
+updateProgress();
+</script>
+</body>
+</html>
