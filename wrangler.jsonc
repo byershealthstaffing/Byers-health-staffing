@@ -1,0 +1,15 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "byers-health-staffing",
+  "compatibility_date": "2026-08-27",
+  "send_email": [
+    {
+      "name": "EMAIL",
+      "destination_address": "Elizzb20@yahoo.com"
+    }
+  ],
+  "vars": {
+    "APPLICATION_DESTINATION": "Elizzb20@yahoo.com",
+    "APPLICATION_FROM": "applications@byershealthstaffing.fyi"
+  }
+}
